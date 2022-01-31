@@ -1,0 +1,190 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+* {
+  margin: 0; /* remove as margens externa de todos os lados do elemento */
+  padding: 0; /* remove o espaçamento interno de toso os lados do elemento */
+  box-sizing: border-box; /* remove o preenchimento e a borda incluidos na largura e na altura */
+  font-family: "Ubuntu", sans-serif; /* define a fonte (letra) */
+}
+
+body {
+  background: linear-gradient(to left, #5011fd 0%, #0f0d86 65%); /* define a cor do elemento selecionado */
+  display: flex; /* transforma todos os elementos internos em flexíveis, dentro do container*/
+  align-items: center; /* alinha os itens flex no container de acordo com o eixo (x ou y) */
+  justify-content: center; /* alinha os intens flex no container e acordo com a direção */
+  min-height: 100vh; /* altura minima do elemento */
+}
+
+div#parallelogram{
+  background: #8583eb;
+  width: 1000px;
+  height: 720px;
+  max-width: 70vw;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px;
+  transform: skew(6deg, 3deg);
+  position: absolute;
+  z-index: -1;
+}
+
+section {
+  display: flex;
+  background:linear-gradient(to left, #5011fd 0%, #0f0d86 65%);;
+  padding: 30px 5px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px;
+  max-width: 70vw;
+  
+}
+
+h1{
+  color: #7775f1;
+  font-size: 40px;
+}
+
+section form h1 {
+  padding: 40px 10px;
+  text-align: center;
+}
+
+fieldset {
+  border: none;
+  justify-items: center;
+}
+
+fieldset:nth-child(2) {
+  display: flex;
+}
+
+fieldset:nth-child(3) {
+  display: flex;
+  padding-top: 20px;
+}
+
+fieldset:nth-child(4) {
+  display: flex;
+  padding-top: 20px;
+}
+
+fieldset:nth-child(5){
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  padding: 0px 10px;
+}
+
+.container input{
+    margin: 10px 10px;
+    width: calc(100% - 20px);
+    height: 70px;
+    border: none;
+    background-color: rgb(225, 231, 243);
+    border-radius: 10px;
+    color: #3d09a7;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 14px 10px 0px 10px;
+}
+
+.container textarea{
+  display: flex;
+  margin: 10px 10px;
+  width: 550px;
+  height: 200px;
+  border: none;
+  background-color: rgb(225, 231, 243);
+  border-radius: 10px;
+  color: #5815df;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 30px 10px 0px 10px;
+    
+}
+
+.container{
+  position: relative;
+}
+
+.container label{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(88, 74, 240);
+    position: absolute;
+    line-height: 70px;
+    top: 10px;
+    left: 20px;
+    user-select: none;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.container input:focus ~ label,
+.container input:valid ~ label,
+.container textarea:focus ~ label {
+	left: 20px;
+	top: -10px;
+	color: #0d85a0;
+}
+
+button{
+  margin: 40px 0;
+	margin-left: 10px;
+	width: calc(100% - 20px);
+	height: 70px;
+  background-color: #d8e6ee;
+	color: rgb(55, 35, 235);
+	font-size: 30px;
+	border:none;
+	border-radius: 15px;
+  cursor: pointer;
+  transition: .3s linear;
+  padding: 10px;
+}
+
+button:hover{
+    opacity: 0.6;
+}
+
+section img{
+  width: 300px;
+  height: 300px;
+  margin: auto 40px;
+}
+
+@media only screen and (max-width: 1080px){
+  div#parallelogram{
+    height: 690px;
+  }
+  section img{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  div#parallelogram{
+    display: none;
+  }
+  section{
+    min-width: 95vw;
+  }
+  form{
+    width: 100%;
+  }
+  fieldset>:nth-child(2),
+  fieldset>:nth-child(3),
+  fieldset>:nth-child(4){
+    flex-direction: column;
+  }
+  fieldset>:nth-child(5){
+    padding: ;
+  }
+  textarea{
+    width: 100%;
+  }
+  button{
+    width: 100%;
+    margin-left: 0;
+  }
+}

@@ -1,50 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css"/>
     <title>Formulário Responsivo - Contato</title>
-</head>
-<body>
+  </head>
+  <body>
+
+    <div id="parallelogram"></div>
+
     <section>
+      
+      <form action="#" method="POST">
 
-        <form action="#" method="post">
-            <h1>Formulário de Contato</h1>
-            <fieldset id="usuario"><legend>Identificação</legend>
-                <div class="container">
-                    <input type="text" required name="name" autofocus>
-                    <label>Nome</label>
-                </div>
-                <div class="container">
-                    <input type="text" required name="lastname" autofocus>
-                    <label>Sobrenome</label>
-                </div>
-            </fieldset>
+        <h1>Formulário de Contato</h1>
 
-            <fieldset id="contato"><legend>Contato</legend>
-                <div class="container">
-                    <input type="email" required name="email">
-                    <label>e-mail</label>
-                </div>
-                <div class="container">
-                    <input type="tel" required name="tel" pattern="[0-13]{4}-[0-13]{6}-[0-13]{5}">
-                    <label>Telefone</label>
-                </div>
-            </fieldset>
+        <fieldset>
 
-            <fieldset id="message"><legend>Mensagem</legend>
-                <div class="container">
-                    <textarea name="message" cols="30" rows="10"></textarea>
-                    <label>Mensagem</label>
-                </div>
-            </fieldset>
+          <div class="container">
+            <input type="text" required name="name" autofocus>
+            <label>Nome</label>
+          </div>
+          
+          <div class="container">
+            <input type="text" required name="lastname">
+            <label>Sobrenome</label>
+          </div>
+        
+        </fieldset>
 
-            <button type="submit">Enviar!</button>
+        <fieldset>
 
+          <div class="container">
+            <input type="email" required name="email">
+            <label>e-mail</label>
+          </div>
+          <div class="container">
+            <input type="tel" required name="tel">
+            <label>Telefone</label>
+          </div>
+        
+        </fieldset>
 
-        </form>
+        <fieldset>
+        
+          <div class="container">
+            <textarea name="message" cols="30" rows="10"></textarea>
+            <label>Mensagem</label>
+          </div>
+        
+        </fieldset>
 
+        <fieldset>
+
+          <button type="submit">Enviar!</button>
+
+        </fieldset>
+
+    </form>
+    <img src="imagens/email.png">
     </section>
-</body>
+  
+  </body>
+
 </html>
